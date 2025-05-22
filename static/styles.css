@@ -7,15 +7,15 @@
     --white: #fff;
     --shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
-.top-center-image {
+body{.top-center-image {
     text-align: center ;
     margin-top: 20px;
 
-}
+}}
 .top-center-image img {
     max-width: 200px;
     height: auto;
-    border-radius: 50%;
+    display: inline-block;
 }
 * {
     box-sizing: border-box;
