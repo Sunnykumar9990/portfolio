@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Lighter gray background */
+    color: #343a40; /* Darker text color for better contrast */
+    margin: 0;
+    padding-top: 56px; /* Adjust if navbar height changes */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add some space below the navbar */
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #007bff; /* Primary color for hero background */
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Space below hero section */
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.hero-section .btn {
+    margin: 5px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 25px; /* Rounded buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section .btn-primary {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.hero-section .btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.hero-section .btn-secondary:hover {
+    background-color: #ffffff;
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+.hero-section img.rounded-circle {
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Section Titles */
+h2 {
+    color: #007bff; /* Primary color for section titles */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Badges for skills */
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
+
+/* Footer (Optional - if you add a footer in base.html) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    margin-top: 40px;
+}
