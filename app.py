@@ -30,6 +30,9 @@ def about():
 def projects():
     return render_template('projects.html')
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
