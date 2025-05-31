@@ -1,52 +1,34 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
 
-# Database model for contact form
-class ContactMessage(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(100), nullable=False)
-    message = db.Column(db.Text, nullable=False)
-
-# Create tables
-with app.app_context():
-    db.create_all()
-
-# Routes
+# Rute
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html') # Početna stranica
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html') # O nama
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html') # Projekti
 
 @app.route('/services')
 def services():
-    return render_template('services.html')
+    return render_template('services.html') # Usluge
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        message = request.form['message']
-        
-        new_message = ContactMessage(name=name, email=email, message=message)
-        db.session.add(new_message)
-        db.session.commit()
-        
-        return redirect(url_for('home'))
+        # Ovdje bi inače bila logika za spremanje poruke
+        # Npr. slanje emaila ili spremanje u datoteku
+        # name = request.form['name']
+        # email = request.form['email']
+        # message = request.form['message']
+        print(f"Primljena poruka od: {request.form['name']} ({request.form['email']}): {request.form['message']}")
+        return redirect(url_for('home')) # Preusmjeri na početnu stranicu nakon slanja
     
-    return render_template('contact.html')
+    return render_template('contact.html') # Kontakt
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False) # Pokreni aplikaciju
